@@ -63,6 +63,7 @@ PyObject *py_ue_get_num_players(ue_PyUObject *self, PyObject * args) {
 #else
 	AGameModeBase *game_mode = world->GetAuthGameMode();
 #endif
+
 	if (!game_mode)
 		return PyErr_Format(PyExc_Exception, "unable to retrieve GameMode from world");
 #if ENGINE_MINOR_VERSION < 14
@@ -84,6 +85,7 @@ PyObject *py_ue_get_num_spectators(ue_PyUObject *self, PyObject * args) {
 #else
 	AGameModeBase *game_mode = world->GetAuthGameMode();
 #endif
+
 	if (!game_mode)
 		return PyErr_Format(PyExc_Exception, "unable to retrieve GameMode from world");
 #if ENGINE_MINOR_VERSION < 14
